@@ -1,0 +1,1 @@
+https://github.com/buzi123/DjangoProject.git
