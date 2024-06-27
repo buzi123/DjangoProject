@@ -7,4 +7,5 @@ urlpatterns = [
     # path('toggle_led/', views.toggle_led, name='toggle_led'),
     path('control_led/<str:state>/', views.control_led, name='control_led'),
     path('status/', views.device_status, name='device_status'),
+    path('latest-data/', views.latest_data_view, name='latest_data'),
 ]

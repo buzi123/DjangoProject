@@ -117,8 +117,8 @@ def control_led(request, state):
     # 请求完成后，函数重定向用户到设备状态页面，HttpResponseRedirect 是 Django 提供的一个快捷方法，
     # 用于生成一个 HTTP 302 重定向响应。
 
-# 定义一个视图函数，用于显示最新的数据记录
+
 def latest_data_view(request):
-    latest_data = DeviceData.objects.order_by('-id')[:100]  # 获取最新的100条数据
+    latest_data = DeviceData.objects.order_by('-timestamp')[:100]  # 获取最新的100条数据
     context = {'latest_data': latest_data}
-    return render(request, 'latest_data.html', context)
+    return render(request, 'device/latest_data.html', context)
